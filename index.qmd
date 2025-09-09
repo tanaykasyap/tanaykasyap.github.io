@@ -53,7 +53,7 @@ image: assets/img/kid-tanay.jpg
 </div>
 ```
 Hi, I’m **Tanay Kasyap**—an incoming PhD student in Economics at [London Business School](https://www.london.edu/).  
-My research interests are **industrial organization**, **microeconomic theory**, and **labor economics** (with a focus on **time use**).
+My research interests are **industrial organization**, **contract theory**, and **labor economics** (with a focus on **time use**).
 
 Previously, I was a pre-doctoral research fellow at Yale’s Tobin Center and Economic Growth Center, working with
 [Samuel Kortum](https://economics.yale.edu/people/samuel-kortum) and

@@ -5,3 +5,5 @@
 .RData
 .Ruserdata
 */.ipynb_checkpoints/
+
+/.quarto/
