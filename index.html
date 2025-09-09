@@ -68,6 +68,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -179,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="name">Tanay Kasyap</div>
   <div class="fullname">(Full name: <em>Venkata Tanay Kasyap Kondiparthy</em>)</div>
   <div class="kicker"><strong> Incoming PhD Student in Economics, London Business School</strong></div>
-  <div class="badges">
+  <div class="badges" data-aos="zoom-in" data-aos-delay="150">
     <!-- <span class="pill">Visiting Student, Yale GSAS (2024–25)</span> -->
     <!-- <span class="pill">Pre-Doctoral Research Fellow, Yale Tobin Center and Economic Growth Center</span> -->
   <div class="badges">
@@ -238,6 +239,12 @@ My research interests are <strong>industrial organization</strong>, <strong>cont
 
 </main> <!-- /main -->
 <script src="assets/js/site.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ once: true, duration: 600, easing: 'ease-out' });
+  });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
