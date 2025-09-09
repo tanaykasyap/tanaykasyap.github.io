@@ -1,0 +1,187 @@
+---
+title: "CV"
+toc: true
+toc-location: left
+page-layout: article
+---
+
+## Education
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">PhD in Economics</div>
+<div class="cv-inst">London Business School</div>
+:::
+<div class="cv-dates">2025–</div>
+:::
+<!-- <div class="cv-subtle">Research fields: Industrial Organization, Contract Theory, Labor (Time Use) </div> -->
+
+:::
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">Visiting Student (Economics )</div>
+<div class="cv-inst">Yale University, GSAS</div>
+:::
+<div class="cv-dates">2024–2025</div>
+:::
+<div class="cv-keymods-label">Key modules</div>
+Graduate Measure Theory and Probability (A+), Functional Analysis 
+:::
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">MSc Econometrics &amp; Mathematical Economics (EME)</div>
+<div class="cv-inst">London School of Economics</div>
+:::
+<div class="cv-dates">2023–2024</div>
+:::
+<div class="cv-keymods-label">Key modules</div>
+Econometric Analysis (Top 5%), Advanced Macroeconomics, Advanced Microeconmics, Contracts and Organization
+:::
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">MSc Economics</div>
+<div class="cv-inst">University of Warwick</div>
+:::
+<div class="cv-dates">2022–2023</div>
+:::
+<div class="cv-keymods-label">Key modules</div>
+Microeconomic Theory (Top 1%), PhD Stochastic Calculus, Game Theory, Monetary Economcis (Top 1%)
+:::
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">BSc Economics</div>
+<div class="cv-inst">University of Warwick</div>
+:::
+<div class="cv-dates">2019–2022</div>
+:::
+<div class="cv-keymods-label">Key modules</div>
+Microeconomics, Macroeconomics, Econometrics, 
+Advanced Time Series Econometrics (Top 1%)
+Mathematical Economics, Real Analysis III,
+Metric Spaces and Toplogy, Mathematical Methods,
+Mathematical Statistics, Stochastic Processes,
+Decision Theory, .
+:::
+
+## Research Experience
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">Pre-Doctoral Research Fellow, Yale University</div>
+<div class="cv-inst">Tobin Center for Economic Policy and Economic Growth Center </div>
+:::
+<div class="cv-dates">June 2024– Sept 2025</div>
+:::
+<div class="cv-subtle">Advisors: Professors Samuel Kortum, Nicholas Ryan</div>
+- For Samuel Kortum:
+    - Optimal Unilateral Carbon policies; 
+    - Gains from trade in a structural change model with climate shocks to agriculture.
+- For Nicholas Ryan:
+    - Scraped over 2000 PDFs to build a dataset on energy firm's cost quotations to join the energy grid.
+    - Reduced form regressions to feed into the model CCPs and CTPs. 
+    - Estimating a dynamic game for firms joining the California energy grid (CAISO).
+   
+<div class="cv-subsection">Papers worked on</div>
+- [Firm-to-Firm Trade: Imports, Exports, and the Labor Market](https://bpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/c/4257/files/2023/10/EM_10192023.pdf) *(Econometrica, 2025).*
+- [Optimal Unilateral Carbon Policy](https://bpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/c/4257/files/2024/12/Optimal_Unilateral_Carbon_Policy__Direct-66.pdf)
+- Agriculture and Gains from Trade.
+:::
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">Research Assistant, University College London </div>
+<div class="cv-inst"> Centre for Time Use Research</div>
+:::
+<div class="cv-dates">Nov 2023 – June2024</div>
+:::
+<div class="cv-subtle">Advisors: Professor Jonathan Gershuny, Dr Juana Lamote de Grignon Perez </div>
+- In a research project funded by the International Labor Organization, Investigated the underestimation of child labour in survey questionnaire vs time use diaries in Low Middle Income Countries.
+- Identified, collected, and harmonised over 300 surveys to construct the [Multinational Time Use Survey](https://www.timeuse.org/mtus).
+
+:::
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">Research Assistant, University of Warwick</div>
+<div class="cv-inst">Microeconmic Theory - Competition and Regulation</div>
+:::
+<div class="cv-dates">Jan 2023 - June 2023</div>
+:::
+<div class="cv-subtle">Advisor: Professor Daniele Condorelli </div>
+<div class="cv-subsection">Papers worked on</div>
+- [Fair-share payments for Network Investments](https://doi.org/10.1016/j.infoecopol.2025.101127) *(Information Economics, 2025).*
+- [Data-Driven Envelopment with Privacy-Policy Tying ](https://doi.org/10.1093/ej/uead090) *(The Economic Journal, 2024).*
+
+
+:::
+
+
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-title">Research Assistant, University of Warwick</div>
+<div class="cv-inst">Labor Economics</div>
+:::
+<div class="cv-dates">June 2022 - Nov 2022</div>
+:::
+<div class="cv-subtle">Advisor: Professor Jennifer Smith </div>
+- Project: Investigating individual labour market flows and transitions using BHPS and UKHLS panel data 1980-2020.
+    - Created new datasets from BHPS/UKHLS.
+    - Conducted sequence analysis using SQ/SADI package in STATA.
+    - Investigated labour market flows with optimal matching and clustering analysis.
+
+
+:::
+
+## Methods & Programming
+Python, R, Stata, LaTeX (advanced); MATLAB, Dynare (intermediate); ArcGIS (beginner)
+
+## Teaching 
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-inst">Online Tutor</div>
+:::
+<div class="cv-dates">August 2023 - Nov 2023</div>
+:::
+- Undergraduate- Economics.
+- A level- Economics, Mathematics, Further Mathematics, Further Statistics.
+
+:::
+
+## Awards
+::: {.cv-card}
+::: {.cv-head}
+::: {.cv-left}
+<div class="cv-inst">Pioneer Award, University of Warwick</div> 
+:::
+<div class="cv-dates">2022</div>
+
+
+<div class="cv-inst">Exceptional Volunteer, Warwick Volunteers,</div> 
+<div class="cv-dates">2021</div>
+:::
+- Awarded for Outstanding commitment to the local community.
+
+:::
+## Languages
+English (IELTS: 8.5/9, C2), Hindi (Native), Telugu (Proficient), Sanskrit (Intermediate)
+
+## Citizenship
+🇮🇳 Indian
+
+---
+
+<a class="btn btn-ghost" href="javascript:window.print()">Print as PDF</a>

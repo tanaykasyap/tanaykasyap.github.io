@@ -1,0 +1,175 @@
+---
+title: "Research"
+page-layout: article
+---
+
+## Working Papers
+
+<div class="wp-item">
+
+### Countervailing Vertical Contracting
+**with Joseph Basford and Daniele Condorelli**  
+<span class="wp-meta">Last updated: <strong>June 07, 2025</strong></span>
+
+```{=html}
+<details class="toggle">
+  <summary class="pillbtn">Abstract</summary>
+  <div class="toggle-body">
+    <p>We study a setting in which a privately informed supplier must secure a publicly observed license from a monopolist before selling to a private-value buyer. Licensing fees, tied to subsequent sale terms, optimally take the form of royalties which impose penalties at low prices and which may be negative at high prices to enforce price-maintenance and screen the buyer, yielding allocations equivalent to second-degree price discrimination. Licensing’s welfare impact is ambiguous — it can reduce buyer-driven deadweight loss but introduce supplier inefficiencies. Applied to exclusive-dealing, our model shows such contracts can <em>enhance</em> aggregate welfare, contrary to Aghion &amp; Bolton (1987).</p>
+  </div>
+</details>
+
+
+<details class="toggle">
+  <summary class="pillbtn">Slides</summary>
+  <div class="toggle-body">
+    <div class="presented"><strong>Presented*:</strong> Warwick Micro Theory Work in Progress, June 2025.</div>
+    <p><a class="download-pill" href="assets/slides/countervailing.pdf" target="_blank" rel="noopener">Download slides (PDF)</a></p>
+  </div>
+</details>
+```
+
+
+
+
+<div class="wp-item">
+
+### Hierarchies of Belief Types in Games with Many Players
+**with Peter Hammond**  
+<span class="wp-meta">Last updated: <strong>June 2025</strong></span>
+
+```{=html}
+<details class="toggle">
+  <summary class="pillbtn">Abstract</summary>
+  <div class="toggle-body">
+    <p>Following Mertens &amp; Zamir (1985) and Brandenburger &amp; Dekel (1993), universal type spaces have been constructed for each player in a general <em>n</em>-player game of incomplete information, where types encode hierarchies of beliefs. We introduce an analogous construction for games with a <em>continuum</em> of players indexed by the Lebesgue unit interval. For each player, belief types correspond to joint probability measures over triples consisting of (i) the player’s label, (ii) a non-belief type given by a cardinal equivalence class of payoff functions, and (iii) a recursively constructed hierarchy of belief types. The marginal over player labels must equal Lebesgue measure.</p>
+  </div>
+</details>
+
+
+<!--
+<details class="toggle">
+  <summary class="pillbtn">Slides</summary>
+  <div class="toggle-body">
+    <div class="presented"><strong>Presented:</strong> —</div>
+    <p><a class="download-pill" href="assets/slides/hierarchies.pdf" target="_blank" rel="noopener">Download slides (PDF)</a></p>
+  </div>
+</details>
+-->
+
+
+```
+
+</div>
+</div>
+
+---
+
+
+## Publications
+
+
+
+<div class="pub-item">
+
+### <em>Hierarchies of Beliefs for Many Player Games</em>
+<div class="pub-meta"><strong>Warwick-Monash Economics Student Papers</strong>, 2024.</div>
+
+```{=html}
+<div class="wp-controls">
+  <details id="pub-abs-hierarchies" class="toggle">
+    <summary class="pillbtn pillbtn--soft">Abstract</summary>
+    <div class="toggle-body">
+      <p><em>Mertens and Zamir (1985) first provided the universal type space construction for finite
+player games of incomplete information with a compact state space. Brandenburger and
+Dekel (1993) complemented it for a Polish state space. This paper extends the construction
+of Brandenburger and Dekel (1993) to games with infinitely many players for Harsanyi’s
+notion of a type. The extension is formulated by randomly drawing a countably infinite
+set of actual players from a continuum of potential players, represented by their labels in
+[0,1]. The random distribution of the countably infinite set of actual players almost surely
+converges to Lebesgue due to the Glivenko–Cantelli theorem. A coherent type is shown
+to induce beliefs over other player’s types and common knowledge of coherency closes the
+model of beliefs. Implications of dropping the Polish space assumption are discussed and
+an informal extension to measurable spaces is provided for future work. The formalisation
+provided here allows Harsanyi’s notion of Type.</em></p>
+    </div>
+  </details>
+
+  <!-- PDF opens directly in a new tab -->
+  <a class="pillbtn--soft"
+     href="https://warwick.ac.uk/fac/soc/economics/research/wmesp/manage/72_-_venkata_tanay_kasyap_kondiparthy.pdf"
+     target="_blank" rel="noopener">PDF</a>
+</div>
+```
+</div>
+
+<div class="pub-item">
+
+### <em>Estimating How Much Children Work: Questionnaires vs Time Use Diaries</em>
+<div class="pub-authors">
+  with Juana Lamote de Grignon Pérez, Federico Blanco Allais, Wenbin Wang, Matthew Henglong Luo, Jialu Tang
+</div>
+<div class="pub-meta"><strong>Journal of Development Economics</strong> (conditionally accepted, 2025).</div>
+
+```{=html}
+<div class="wp-controls">
+  <details id="pub-abs-jde" class="toggle">
+    <summary class="pillbtn pillbtn--soft">Abstract</summary>
+    <div class="toggle-body">
+      <p>Current estimates of child labour often rely on questions such as, “How many hours did you work last week?” While biases in adult self-reports are well-documented in high-income countries, there is limited evidence on the accuracy of children's responses in low- and middle-income countries (LMICs). Using data from nine LMICs, including China and India, this paper shows that time diaries report more than twice as many work hours as standard questionnaires. This discrepancy suggests that current estimates may significantly understate child labour. Moreover, certain forms of work—such as collecting water or firewood—appear to contribute to these measurement gaps.</p>
+    </div>
+  </details>
+
+  <!-- No PDF yet; when you have one, UNCOMMENT the line below and set the URL -->
+  <!-- <a class="pillbtn--soft" href="LINK-TO-JDE-PDF" target="_blank" rel="noopener">PDF</a> -->
+</div>
+```
+</div>
+
+
+---
+
+## Data
+
+<ul class="selpubs">
+  <li>
+    <em>Multinational Time Use Study Database, Version 11</em> — dataset (2023).
+    <a href="https://www.timeuse.org/mtus/surveys" target="_blank" rel="noopener">Dataset</a>
+  </li>
+</ul>
+
+---
+
+## Conferences
+
+- <em>Countervailing Vertical Contracting*</em> — Warwick Micro Theory Work in Progress, June 2025.  
+- <em>Estimating How Much Children Work: Questionnaires vs Time Use Diaries*</em> — International Association for Time Use Research Conference, Tokyo, Nov-2023.  
+- <em> Evaluating the Twin Deficit Hypothesis in the United Kingdom</em>
+   - International Conference of Undergraduate Research, September 2022,  
+   - British Conference of Undergraduate Research, April 2023.
+- <em> Exploring the Relation Between Children and Gender Pay gap in the United Kingdom </em> — International Conference of Undergraduate Research, Sept. 27-29, 2021.
+
+<small>* presented by co-authors</small>
+
+
+
+
+
+
+<!--To link to abstracts -->
+<script>
+(function () {
+  function openHashTarget() {
+    var hash = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
+    if (!hash) return;
+    var el = document.getElementById(hash);
+    if (!el) return;
+    // if target is inside/itself a <details>, open it
+    var details = el.tagName.toLowerCase() === "details" ? el : el.closest("details");
+    if (details && !details.open) details.open = true;
+    (el || details).scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  window.addEventListener("DOMContentLoaded", openHashTarget);
+  window.addEventListener("hashchange", openHashTarget);
+})();
+</script>

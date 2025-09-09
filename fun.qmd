@@ -1,0 +1,11 @@
+---
+title: "Fun"
+---
+
+- Sports:
+    - Basketball: Golden State Warriors.
+    - Football: Chelsea.
+    - Formula One: Ferrari.
+    - Played field hockey at the state (county) level in high school.
+    - Cricket Lover.
+    - Occasional Volleyball Enthusiast

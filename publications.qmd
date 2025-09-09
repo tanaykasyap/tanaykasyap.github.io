@@ -1,0 +1,19 @@
+---
+title: "Publications"
+nocite: |
+  @kasyap2024_wmesp
+  @kasyap2025_childlabour
+  @kasyap2025_vertical
+  @kasyap2025_belief_types
+  @kasyap2025_mtus_chapter
+  @kasyap2023_mtus_v11
+  @kasyap2023_iatur
+---
+
+# Publications & Selected Works
+
+This page lists items from `papers.bib`. Edit that file and rebuild to update.
+
+## References
+::: {#refs}
+:::

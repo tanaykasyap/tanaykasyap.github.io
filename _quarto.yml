@@ -1,0 +1,53 @@
+# Radhe Radhe
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - assets/**     # <— force-copy images, JS, etc. into docs/
+    - .nojekyll
+
+
+website:
+  title: "Tanay Kasyap"
+  site-url: "https://tanaykasyap.github.io"
+  description: "PhD Student in Economics, London Business School"
+  page-footer:
+    left: "Publishing as **Tanay Kasyap**. Full name: Venkata Tanay Kasyap Kondiparthy."
+    right: "© {September 2025}."
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "About"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Code"
+        href: code.qmd
+      - text: "Fun"
+        href: fun.qmd
+      - text: "CV"
+        href: cv.qmd
+
+format:
+  html:
+    theme: journal        # <— single theme; no toggle will appear
+    appearance: false     # <— belt & suspenders: hide toggle explicitly
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    include-after-body:
+      - assets/footer.html
+
+
+
+bibliography: papers.bib
+csl: apa.csl
+
+execute:
+  echo: false
+  warning: false
+  freeze: auto
