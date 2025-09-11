@@ -383,3 +383,33 @@ a.pillbtn--soft:hover{
   .hero-emblem{ top: 10px; right: 10px; }
   .hero-emblem img{ width: 46px; }
 }
+
+/* Only keep the full-height sticky sidebar on LARGE screens */
+@media (min-width: 992px) {
+  #quarto-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+    padding-bottom: 2rem;
+    border-right: 1px solid rgba(0,0,0,.06);
+  }
+}
+
+/* On MOBILE, let Quarto control the drawer (reset our overrides) */
+@media (max-width: 991.98px) {
+  #quarto-sidebar {
+    position: static;       /* don't fight Quarto's off-canvas drawer */
+    height: auto;
+    overflow: visible;
+    border-right: none;     /* Quarto applies its own styles */
+  }
+
+  /* Tidy the portrait block for the narrow drawer */
+  :root { --portrait-size: 132px; }
+  .sidebar-photo { width: var(--portrait-size); margin: .25rem auto .85rem; }
+  #toggle-photo { width: var(--portrait-size); }
+
+  /* Optional: align title nicely in the drawer */
+  aside.sidebar .sidebar-title { text-align: center; }
+}
