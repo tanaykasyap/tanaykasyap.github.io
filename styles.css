@@ -1,421 +1,716 @@
 /* ================================
-   Vars & Base
+   Variables & Base Styles
 =================================== */
-:root{
-  --accent: #7c3aed;        /* primary purple */
-  --portrait-size: 168px;   /* sidebar portrait size */
+:root {
+  --accent: #7c3aed;        /* Primary purple color */
+  --portrait-size: 168px;   /* Desktop portrait size */
+  --chip-h: 44px;           /* Chip height for Abstract/PDF buttons */
+  --mobile-portrait: 220px; /* Larger mobile portrait size */
 }
 
-body{
-  font-family: Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',Palatino,'Times New Roman',Times,serif;
+body {
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Times New Roman', Times, serif;
   line-height: 1.6;
 }
 
-h1,h2,h3,h4,h5,h6{
-  letter-spacing: -.015em;
-  font-weight: 700;
+h1, h2, h3, h4, h5, h6 { 
+  letter-spacing: -.015em; 
+  font-weight: 700; 
 }
 
-a{
-  color: var(--accent);
-  text-underline-offset: .2em;
-  text-decoration-thickness: .07em;
+a { 
+  color: var(--accent); 
+  text-underline-offset: .2em; 
+  text-decoration-thickness: .07em; 
 }
-a:hover{ color: #5b21b6; }
 
-@media (min-width:1200px){
-  .page-layout-article .page-columns .content{ max-width: 900px; }
+a:hover { 
+  color: #5b21b6; 
 }
 
 /* ================================
-   Sidebar (layout, title, search)
+   Desktop Layout (992px and up)
 =================================== */
-.sidebar{ border-right: 1px solid rgba(0,0,0,.06); }
-
-/* Full-height left sidebar */
-#quarto-sidebar{
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: auto;
-  padding-bottom: 2rem;
-  border-right: 1px solid rgba(0,0,0,.06);
+@media (min-width: 992px) {
+  /* Full-height sticky sidebar for desktop */
+  #quarto-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+    padding-bottom: 2rem;
+    border-right: 1px solid rgba(0,0,0,.06);
+  }
+  
+  /* Desktop content width */
+  .page-layout-article .page-columns .content { 
+    max-width: 900px; 
+  }
+  
+  /* Hide mobile navigation on desktop */
+  .mobile-nav {
+    display: none !important;
+  }
 }
 
-/* Ensure main content never creeps under the sidebar */
-#quarto-content{
-  position: relative;
-  z-index: 0;
+/* Prevent content from sliding under sidebar */
+#quarto-content { 
+  position: relative; 
+  z-index: 0; 
 }
 
-/* Center the sidebar title and align with portrait below */
-.sidebar .sidebar-title{ font-weight: 800; letter-spacing: -.02em; }
+/* Centered sidebar title */
+.sidebar .sidebar-title { 
+  font-weight: 800; 
+  letter-spacing: -.02em; 
+}
 
 #quarto-sidebar .sidebar-title,
 nav.sidebar .sidebar-title,
-aside.sidebar .sidebar-title{
+aside.sidebar .sidebar-title {
   text-align: center;
-  margin: 0 auto .35rem auto;
-  padding-left: 0;
+  margin: 0 auto .35rem;
+  padding-left: 0; 
   padding-right: 0;
 }
 
 /* ================================
-   Hero (top of About)
+   Hero Section (Desktop & Mobile)
 =================================== */
-.hero{
-  margin: 0 0 1.25rem 0;
+.hero {
+  margin: 0 0 1.25rem;
   padding: 1.25rem;
   border-radius: 14px;
   background: linear-gradient(180deg, rgba(124,58,237,.06), rgba(124,58,237,.02));
   border: 1px solid rgba(124,58,237,.12);
+  position: relative;
 }
-.hero .name{
-  font-size: clamp(1.9rem, 4.8vw, 3rem);
-  line-height: 1.08;
-  margin-bottom: .2rem;
-}
-.hero .fullname{ font-size: .95rem; opacity: .85; margin-bottom: .2rem; }
-.hero .kicker{ font-size: 1.05rem; margin-bottom: .6rem; }
 
-/* badges in hero can stay pill-shaped */
-.hero .badges .pill{
-  display: inline-block;
+.hero .name { 
+  font-size: clamp(1.9rem, 4.8vw, 3rem); 
+  line-height: 1.08; 
+  margin-bottom: .2rem; 
+}
+
+.hero .fullname { 
+  font-size: .95rem; 
+  opacity: .85; 
+  margin-bottom: .2rem; 
+}
+
+.hero .kicker { 
+  font-size: 1.05rem; 
+  margin-bottom: .6rem; 
+}
+
+.hero .badges .pill {
+  display: inline-block; 
   border: 1px solid rgba(0,0,0,.1);
-  border-radius: 999px;
-  padding: .35rem .65rem;
+  border-radius: 999px; 
+  padding: .35rem .65rem; 
   margin: .4rem .4rem .4rem 0;
-  font-size: .95rem;
+  font-size: .95rem; 
   background: #fff;
 }
 
+/* Yale emblem positioning */
+.hero-emblem {
+  position: absolute; 
+  top: 12px; 
+  right: 14px; 
+  display: inline-block; 
+  line-height: 0;
+  z-index: 1; 
+  opacity: .95; 
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.hero-emblem img { 
+  display: block; 
+  width: 60px; 
+  height: auto; 
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.12)); 
+}
+
+.hero-emblem:hover { 
+  transform: scale(1.03); 
+  opacity: 1; 
+}
+
+@media (min-width: 900px) { 
+  .hero-emblem img { 
+    width: 72px; 
+  } 
+}
+
 /* ================================
-   Sidebar Portrait (circle headshot)
+   Desktop Sidebar Portrait
 =================================== */
-.sidebar-photo{
+.sidebar-photo {
   width: var(--portrait-size);
-  margin: .25rem auto .85rem auto;
+  margin: .25rem auto .85rem;
   text-align: center;
 }
 
-.sidebar .photo-frame{
-  width: var(--portrait-size);
+.sidebar .photo-frame {
+  width: var(--portrait-size); 
   height: var(--portrait-size);
-  padding: 4px;
-  border-radius: 50%;
+  padding: 4px; 
+  border-radius: 50%; 
   margin: 0 auto;
   background: radial-gradient(ellipse at top, rgba(124,58,237,.18), rgba(124,58,237,.06));
 }
 
-.sidebar .photo-frame img{
-  width: 100%;
-  height: 100%;
+.sidebar .photo-frame img {
+  width: 100%; 
+  height: 100%; 
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: cover; 
   object-position: center;
   box-shadow: 0 10px 18px rgba(0,0,0,.12);
   transition: opacity .15s ease;
 }
-.fadeout{ opacity: 0 !important; }
 
-/* Button under the portrait */
-#toggle-photo{
-  width: var(--portrait-size);
-  display: inline-block;
+.fadeout { 
+  opacity: 0 !important; 
 }
 
-/* tidy spacing around title/search relative to photo block */
-.sidebar .sidebar-title + .sidebar-photo{ margin-top: .5rem; }
-.sidebar .sidebar-photo + .sidebar-search{ margin-top: .75rem; }
+#toggle-photo { 
+  width: var(--portrait-size); 
+  display: inline-block; 
+}
+
+/* Spacing adjustments */
+.sidebar .sidebar-title + .sidebar-photo { 
+  margin-top: .5rem; 
+}
+
+.sidebar .sidebar-photo + .sidebar-search { 
+  margin-top: .75rem; 
+}
 
 /* ================================
-   Utilities / Buttons
+   Mobile-Specific Styles (max 991.98px)
 =================================== */
-.btn-ghost{
-  border-radius: 12px;
+@media (max-width: 991.98px) {
+  /* Hide all Quarto default mobile elements including the title */
+  #quarto-sidebar,
+  .quarto-sidebar-toggle,
+  .sidebar-toggle,
+  .sidebar-toggle-button,
+  .sidebar-menu-container,
+  #quarto-header,
+  .quarto-title-meta,
+  #title-block-header,
+  .quarto-title,
+  h1.title,
+  header.page-header,
+  .page-header { 
+    display: none !important; 
+  }
+  
+  /* Remove any padding that Quarto adds for its header */
+  body {
+    padding-top: 0 !important;
+  }
+  
+  #quarto-content {
+    padding-top: 60px; /* Space for our custom nav */
+  }
+  
+  /* Mobile navigation header */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  
+  /* Navigation bar with name and menu button */
+  .mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    height: 60px;
+    background: #fff;
+  }
+  
+  /* Your name in top-left */
+  .mobile-nav-brand {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    color: #1a202c;
+    font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+  }
+  
+  /* Hamburger menu button */
+  .mobile-nav-toggle {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  
+  .mobile-nav-toggle:hover {
+    background-color: rgba(0,0,0,.05);
+    border-color: rgba(0,0,0,.2);
+  }
+  
+  .mobile-nav-toggle:active {
+    background-color: rgba(0,0,0,.08);
+  }
+  
+  /* Hamburger icon */
+  .hamburger {
+    width: 22px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #374151;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
+  /* Animated hamburger to X */
+  .mobile-nav-toggle.active .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .mobile-nav-toggle.active .hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  
+  .mobile-nav-toggle.active .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Horizontal scrollable tabs container */
+  .mobile-nav-tabs {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem 0.8rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background: #f9f9f9;
+    border-top: 1px solid rgba(0,0,0,.08);
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  
+  .mobile-nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mobile-nav-tabs.hidden {
+    display: none;
+  }
+  
+  /* Tab buttons with modern pill design */
+  .mobile-nav-tabs a {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 24px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  }
+  
+  .mobile-nav-tabs a:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(124,58,237,.25);
+  }
+  
+  .mobile-nav-tabs a.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  
+  /* Mobile hero adjustments */
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    margin-top: 0;
+  }
+  
+  /* Hide the name in hero on mobile (shown in nav instead) */
+  .hero .name {
+    display: none;
+  }
+  
+  /* Larger mobile portrait in hero */
+  .hero-portrait {
+    width: var(--mobile-portrait);
+    height: var(--mobile-portrait);
+    margin: 0 auto 2rem;
+    padding: 5px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at top, rgba(124,58,237,.22), rgba(124,58,237,.08));
+    box-shadow: 0 4px 20px rgba(124,58,237,.15);
+  }
+  
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    transition: opacity .15s ease;
+  }
+  
+  /* Toggle button for mobile portrait */
+  .hero-portrait-toggle {
+    display: block;
+    width: auto;
+    margin: 1.2rem auto;
+    padding: 0.6rem 1.8rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(124,58,237,.25);
+  }
+  
+  .hero-portrait-toggle:hover {
+    background: #5b21b6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124,58,237,.35);
+  }
+  
+  .hero-portrait-toggle:active {
+    transform: translateY(0);
+  }
+  
+  /* Yale emblem on mobile */
+  .hero-emblem {
+    top: 12px;
+    right: 12px;
+  }
+  
+  .hero-emblem img {
+    width: 50px;
+  }
+  
+  /* Adjust hero content spacing */
+  .hero .fullname {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .hero .kicker {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .hero .badges {
+    margin-top: 1rem;
+  }
+  
+  .hero .badges .pill {
+    font-size: 0.88rem;
+    padding: 0.35rem 0.7rem;
+    margin: 0.25rem;
+  }
+}
+
+/* ================================
+   Utility Classes & Components
+=================================== */
+.btn-ghost {
+  border-radius: 12px; 
   border: 1px solid rgba(0,0,0,.12);
-  padding: .5rem .85rem;
+  padding: .5rem .85rem; 
   background: transparent;
 }
-.btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
 
-/* simple selected-pubs list spacing (if used anywhere) */
-.selpubs li{ margin-bottom: .55rem; }
+.btn-ghost:hover { 
+  border-color: var(--accent); 
+  color: var(--accent); 
+}
 
-/* Nice section spacing on pages with title-block */
-#title-block-header + main.content{ padding-top: .5rem; }
+.selpubs li { 
+  margin-bottom: .55rem; 
+}
 
 /* ================================
-   Working Papers (toggles)
+   Working Papers Toggle Components
 =================================== */
-.wp-item{ margin-bottom: 2rem; }
-.wp-meta{ font-size: .95rem; opacity: .85; margin: .15rem 0 .75rem; }
-
-.wp-controls{
-  display: flex;
-  gap: .5rem;
-  flex-wrap: wrap;
-  margin-bottom: .6rem;
-}
-details.toggle{ display: inline-block; }
-
-/* RECTANGLE toggles (no circular pills) */
-summary.pillbtn{
-  list-style: none;
-  cursor: pointer;
-  display: inline-block;
-  padding: .44rem .82rem;
-  border-radius: 12px;                    /* <— soft rectangle */
-  border: 1px solid rgba(0,0,0,.12);
-  background: #fff;
-  font-weight: 600;
-}
-summary.pillbtn::marker,
-summary.pillbtn::-webkit-details-marker{ display: none; }
-details[open] > summary.pillbtn{
-  border-color: var(--accent);
-  color: var(--accent);
+.wp-item { 
+  margin-bottom: 2rem; 
 }
 
-.toggle-body{
-  margin-top: .5rem;
+.wp-meta { 
+  font-size: .95rem; 
+  opacity: .85; 
+  margin: .15rem 0 .75rem; 
+}
+
+.wp-controls { 
+  display: flex; 
+  gap: .5rem; 
+  flex-wrap: wrap; 
+  margin-bottom: .6rem; 
+}
+
+details.toggle { 
+  display: inline-block; 
+}
+
+/* Rectangle chip buttons */
+summary.pillbtn {
+  list-style: none; 
+  cursor: pointer; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  height: var(--chip-h); 
+  padding: 0 .86rem; 
+  margin: 0; 
+  box-sizing: border-box;
+  border-radius: 12px; 
+  border: 1px solid rgba(0,0,0,.12); 
+  background: #fff; 
+  font-weight: 600; 
+  line-height: 1;
+}
+
+summary.pillbtn::marker, 
+summary.pillbtn::-webkit-details-marker { 
+  display: none; 
+}
+
+details[open] > summary.pillbtn { 
+  border-color: var(--accent); 
+  color: var(--accent); 
+}
+
+.toggle-body {
+  margin-top: .5rem; 
   padding: .75rem .9rem;
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08); 
+  border-radius: 12px; 
   background: rgba(124,58,237,.03);
 }
 
-.presented{
-  margin-top: .6rem;
-  font-size: .95rem;
-  opacity: .9;
+.presented { 
+  margin-top: .6rem; 
+  font-size: .95rem; 
+  opacity: .9; 
 }
 
-/* (kept only if you ever embed PDFs; otherwise harmless) */
-.pdf-embed{
-  width: 100%;
-  height: 520px;
-  border: 0;
+/* PDF embed styling */
+.pdf-embed {
+  width: 100%; 
+  height: 520px; 
+  border: 0; 
   border-radius: 10px;
-  background: #fff;
+  background: #fff; 
   box-shadow: 0 8px 18px rgba(0,0,0,.06);
 }
 
 /* ================================
-   Download links styled as rectangles
+   Download Links
 =================================== */
-a.download-pill{
-  display: inline-block;
-  padding: .44rem .9rem;
-  border-radius: 12px;                    /* <— soft rectangle */
-  border: 1px solid var(--accent);
-  font-weight: 600;
-  text-decoration: none;
+a.download-pill {
+  display: inline-block; 
+  padding: .44rem .9rem; 
+  border-radius: 12px;
+  border: 1px solid var(--accent); 
+  font-weight: 600; 
+  text-decoration: none; 
   color: var(--accent);
 }
-a.download-pill:hover{
-  background: rgba(124,58,237,.08);
-  text-decoration: none;
+
+a.download-pill:hover { 
+  background: rgba(124,58,237,.08); 
+  text-decoration: none; 
 }
 
 /* ================================
-   Publications (soft toggles & links)
+   Publications
 =================================== */
-.pub-item{ margin-bottom: 2rem; }
-.pub-authors{ font-style: italic; margin: .25rem 0 .35rem; }
-.pub-meta{ font-size: .95rem; opacity: .9; margin-bottom: .5rem; }
-
-/* Softer rectangle toggle for publications */
-.pillbtn--soft{
-  list-style: none;
-  cursor: pointer;
-  display: inline-block;
-  padding: .42rem .86rem;
-  border-radius: 12px;                    /* <— soft rectangle */
-  border: 1px solid rgba(0,0,0,.16);
-  background: #fff;
-  color: #444;
-  font-weight: 600;
+.pub-item { 
+  margin-bottom: 2rem; 
 }
-summary.pillbtn--soft::marker,
-summary.pillbtn--soft::-webkit-details-marker{ display: none; }
-details[open] > summary.pillbtn--soft{
-  border-color: rgba(124,58,237,.35);
-  color: #5b21b6;
+
+.pub-authors { 
+  font-style: italic; 
+  margin: .25rem 0 .35rem; 
+}
+
+.pub-meta { 
+  font-size: .95rem; 
+  opacity: .9; 
+  margin-bottom: .5rem; 
+}
+
+/* Soft rectangle Abstract toggle */
+.pillbtn--soft {
+  list-style: none; 
+  cursor: pointer; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  height: var(--chip-h); 
+  padding: 0 .86rem; 
+  margin: 0; 
+  box-sizing: border-box;
+  border-radius: 12px; 
+  border: 1px solid rgba(0,0,0,.16);
+  background: #fff; 
+  color: #444; 
+  font-weight: 600; 
+  line-height: 1;
+}
+
+summary.pillbtn--soft::marker, 
+summary.pillbtn--soft::-webkit-details-marker { 
+  display: none; 
+}
+
+details[open] > summary.pillbtn--soft {
+  border-color: rgba(124,58,237,.35); 
+  color: #5b21b6; 
   background: rgba(124,58,237,.06);
 }
 
-/* Same content box as working papers */
-.pub-item .toggle-body{
-  margin-top: .5rem;
-  padding: .75rem .9rem;
+.pub-item .toggle-body {
+  margin-top: .5rem; 
+  padding: .75rem .9rem; 
   border: 1px solid rgba(0,0,0,.08);
-  border-radius: 12px;
+  border-radius: 12px; 
   background: rgba(124,58,237,.03);
 }
 
-/* Direct PDF link styled like a soft rectangle (no dropdown) */
-a.pillbtn--soft{
-  display: inline-block;
-  padding: .42rem .86rem;
-  border-radius: 12px;                    /* <— soft rectangle */
-  border: 1px solid rgba(0,0,0,.16);
-  background: #fff;
-  color: #444;
-  font-weight: 600;
-  text-decoration: none;
-}
-a.pillbtn--soft:hover{
-  border-color: rgba(124,58,237,.35);
-  background: rgba(124,58,237,.06);
-  color: #5b21b6;
-}
-
-/* Make Abstract (summary) and PDF (a) chips identical in height/centering */
-summary.pillbtn--soft,
-a.pillbtn--soft{
-  display: inline-flex;     /* same box model */
-  align-items: center;      /* vertical centering */
-  line-height: 1.1;         /* identical text height */
-}
-
-/* EXACT match for Abstract (summary) and PDF (link) chips */
-:root { --chip-h: 44px; }  /* tweak if you want taller/shorter chips */
-
-summary.pillbtn--soft,
-a.pillbtn--soft{
-  display: inline-flex;          /* same layout model */
-  align-items: center;           /* vertical centering */
+/* PDF link styled as soft rectangle chip */
+a.pillbtn--soft {
+  display: inline-flex; 
+  align-items: center; 
   justify-content: center;
-  height: var(--chip-h);         /* identical height */
-  padding: 0 .86rem;             /* same side padding */
-  margin: 0;                     /* kill any UA margins */
-  box-sizing: border-box;        /* include border in height */
-  font-size: 1rem;               /* lock text size */
-  line-height: 1;                /* no extra vertical space */
-  border-radius: 12px;           /* same rounded rectangle */
+  height: var(--chip-h); 
+  padding: 0 .86rem; 
+  margin: 0; 
+  box-sizing: border-box;
+  border-radius: 12px; 
   border: 1px solid rgba(0,0,0,.16);
-  background: #fff;
-  color: #444;
-  font-weight: 600;
-  text-decoration: none;         /* for the <a> */
+  background: #fff; 
+  color: #444; 
+  font-weight: 600; 
+  text-decoration: none; 
+  line-height: 1;
 }
 
-/* same hover/open states as before */
-details[open] > summary.pillbtn--soft{
-  border-color: rgba(124,58,237,.35);
-  color: #5b21b6;
-  background: rgba(124,58,237,.06);
-}
-a.pillbtn--soft:hover{
-  border-color: rgba(124,58,237,.35);
-  background: rgba(124,58,237,.06);
+a.pillbtn--soft:hover {
+  border-color: rgba(124,58,237,.35); 
+  background: rgba(124,58,237,.06); 
   color: #5b21b6;
 }
 
-
-
-/* CV cards */
-.cv-card{
-  padding:.75rem .95rem;
-  border:1px solid rgba(0,0,0,.08);
-  border-radius:12px;
-  background:#fff;
-  margin:0 0 1rem 0;
-}
-.cv-head{
-  display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
-  margin-bottom:.25rem;
-}
-.cv-title{ font-weight:700; }
-.cv-inst{ opacity:.9; }
-.cv-dates{ opacity:.65; white-space:nowrap; }
-.cv-subtle{ opacity:.85; margin:.15rem 0 .35rem; }
-
-.cv-keymods-label,
-.cv-subsection{ font-weight:700; margin-top:.35rem; }
-.cv-keymods{ margin:.25rem 0 .1rem 1.1rem; }
-.cv-keymods li{ margin:.18rem 0; }
-
-.cv-bullets{ margin:.2rem 0 .2rem 1.1rem; }
-.cv-bullets li{ margin:.2rem 0; }
-
-.cv-works{ margin:.2rem 0 .2rem 1.1rem; }
-.cv-works li{ margin:.2rem 0; }
-
-
-
-.icon{ vertical-align:-2px; }
-/* structure inside cv-head when using fenced divs */
-.cv-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.25rem;}
-.cv-left{display:flex;flex-direction:column;gap:.1rem;}
-
-
-/* Hero emblem (Yale shield) */
-.hero { position: relative; } /* anchor for absolute positioning */
-
-.hero-emblem{
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  display: inline-block;
-  line-height: 0;       /* removes extra inline spacing */
-  z-index: 1;
-  opacity: .95;
-  transition: transform .15s ease, opacity .15s ease;
+/* ================================
+   CV Cards
+=================================== */
+.cv-card {
+  padding: .75rem .95rem; 
+  border: 1px solid rgba(0,0,0,.08); 
+  border-radius: 12px; 
+  background: #fff; 
+  margin: 0 0 1rem;
 }
 
-.hero-emblem img{
-  display: block;
-  width: 60px;          /* tweak to taste: 52–72px works well */
-  height: auto;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
+.cv-head { 
+  display: flex; 
+  justify-content: space-between; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+  margin-bottom: .25rem; 
 }
 
-/* Subtle hover */
-.hero-emblem:hover{ transform: scale(1.03); opacity: 1; }
-
-/* Responsive sizes */
-@media (min-width: 900px){
-  .hero-emblem img{ width: 72px; }
-}
-@media (max-width: 520px){
-  .hero-emblem{ top: 10px; right: 10px; }
-  .hero-emblem img{ width: 46px; }
+.cv-title { 
+  font-weight: 700; 
 }
 
-/* Desktop: keep your full-height sticky sidebar */
-@media (min-width: 992px) {
-  #quarto-sidebar {
-    position: sticky !important;
-    top: 0 !important;
-    height: 100vh !important;
-    overflow: auto !important;
-    padding-bottom: 2rem;
-    border-right: 1px solid rgba(0,0,0,.06);
-  }
+.cv-inst { 
+  opacity: .9; 
 }
 
-/* Mobile: reset our overrides so Quarto's drawer works */
-@media (max-width: 991.98px) {
-  #quarto-sidebar {
-    position: static !important;
-    height: auto !important;
-    overflow: visible !important;
-    border-right: none !important;
-  }
-
-  /* Tidy portrait size for the narrow drawer */
-  :root { --portrait-size: 132px; }
-  .sidebar-photo { width: var(--portrait-size); margin: .25rem auto .85rem; }
-  #toggle-photo { width: var(--portrait-size); }
+.cv-dates { 
+  opacity: .65; 
+  white-space: nowrap; 
 }
 
+.cv-subtle { 
+  opacity: .85; 
+  margin: .15rem 0 .35rem; 
+}
 
-/* smoother visual feel */
-html { scroll-behavior: auto; } /* let Lenis control it */
+.cv-keymods-label, 
+.cv-subsection { 
+  font-weight: 700; 
+  margin-top: .35rem; 
+}
 
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important; }
+.cv-keymods { 
+  margin: .25rem 0 .1rem 1.1rem; 
+}
+
+.cv-keymods li { 
+  margin: .18rem 0; 
+}
+
+.cv-bullets { 
+  margin: .2rem 0 .2rem 1.1rem; 
+}
+
+.cv-bullets li { 
+  margin: .2rem 0; 
+}
+
+.cv-works { 
+  margin: .2rem 0 .2rem 1.1rem; 
+}
+
+.cv-works li { 
+  margin: .2rem 0; 
+}
+
+.icon { 
+  vertical-align: -2px; 
 }
