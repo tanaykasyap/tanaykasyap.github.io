@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
   // ---- exact image paths
   const KID = "assets/img/kid-tanay.jpg";
@@ -73,4 +73,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   mo.observe(sidebar, { subtree: true, childList: true });
 });
-</script>
+
