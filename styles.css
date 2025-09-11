@@ -384,35 +384,33 @@ a.pillbtn--soft:hover{
   .hero-emblem img{ width: 46px; }
 }
 
-/* Only keep the full-height sticky sidebar on LARGE screens */
+/* Desktop: keep your full-height sticky sidebar */
 @media (min-width: 992px) {
   #quarto-sidebar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: auto;
+    position: sticky !important;
+    top: 0 !important;
+    height: 100vh !important;
+    overflow: auto !important;
     padding-bottom: 2rem;
     border-right: 1px solid rgba(0,0,0,.06);
   }
 }
 
-/* On MOBILE, let Quarto control the drawer (reset our overrides) */
+/* Mobile: reset our overrides so Quarto's drawer works */
 @media (max-width: 991.98px) {
   #quarto-sidebar {
-    position: static;       /* don't fight Quarto's off-canvas drawer */
-    height: auto;
-    overflow: visible;
-    border-right: none;     /* Quarto applies its own styles */
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+    border-right: none !important;
   }
 
-  /* Tidy the portrait block for the narrow drawer */
+  /* Tidy portrait size for the narrow drawer */
   :root { --portrait-size: 132px; }
   .sidebar-photo { width: var(--portrait-size); margin: .25rem auto .85rem; }
   #toggle-photo { width: var(--portrait-size); }
-
-  /* Optional: align title nicely in the drawer */
-  aside.sidebar .sidebar-title { text-align: center; }
 }
+
 
 /* smoother visual feel */
 html { scroll-behavior: auto; } /* let Lenis control it */
