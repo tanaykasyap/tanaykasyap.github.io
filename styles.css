@@ -413,3 +413,11 @@ a.pillbtn--soft:hover{
   /* Optional: align title nicely in the drawer */
   aside.sidebar .sidebar-title { text-align: center; }
 }
+
+/* smoother visual feel */
+html { scroll-behavior: auto; } /* let Lenis control it */
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; }
+}
