@@ -67,8 +67,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+  // Configure MathJax *before* it loads
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      macros: {
+        R: '\\mathbb{R}' // enables \R
+      }
+    },
+    options: {
+      // Process math inside elements that have class "toggle-body"
+      processHtmlClass: 'toggle-body',
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -212,6 +258,14 @@ My research interests are in <strong>industrial organization</strong>, <strong>c
 <em>Estimating How Much Children Work: Questionnaires vs Time Use Diaries</em> — with Juana Lamote de Grignon Pérez, Federico Blanco Allais, Wenbin Wang, Matthew Henglong Luo, Jialu Tang. <strong>Journal of Development Economics</strong> (conditionally accepted, 2025). <a href="research.html#pub-abs-jde">Abstract</a> <!-- Add a PDF link later when you have it:
     · <a href="LINK-TO-JDE-PDF" target="_blank" rel="noopener">PDF</a>
     -->
+</li>
+</ul>
+</section>
+<section id="selected-works-in-progress" class="level3">
+<h3 class="anchored" data-anchor-id="selected-works-in-progress">Selected Works in Progress</h3>
+<ul class="selpubs">
+<li>
+<em>Cointegration-Driven Scale for Multidimensional Diffusions: An Extension of Feller’s Theory to Multidimensional Diffusions</em>. <a href="research.html#wp-cointegration-scale">Abstract</a> ·
 </li>
 </ul>
 

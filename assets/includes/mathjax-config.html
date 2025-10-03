@@ -1,0 +1,17 @@
+<script>
+  // Configure MathJax *before* it loads
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      macros: {
+        R: '\\mathbb{R}' // enables \R
+      }
+    },
+    options: {
+      // Process math inside elements that have class "toggle-body"
+      processHtmlClass: 'toggle-body',
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
